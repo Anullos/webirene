@@ -1,0 +1,51 @@
+@import "./utils.scss";
+@import "./components/header.scss";
+@import "./components/home.scss";
+@import "./components/about.scss";
+@import "./components/portafolio.scss";
+@import "./components/contact.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.ocultar {
+  display: none;
+}
+
+.transition_house {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  z-index: 11;
+  opacity: 1;
+  bottom: 100px;
+  right: 300px;
+  border-radius: 100%;
+}
+
+@keyframes entrarcasa {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(30);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.aumentar {
+  animation: entrarcasa 4s forwards;
+}
+
+.container_house {
+  width: 100%;
+}

@@ -1,0 +1,148 @@
+#site-header {
+  top: 0;
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  transition: all 0.3s ease;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#site-header.hide {
+  top: -56px;
+}
+
+.navBar {
+  display: flex;
+  height: 56px;
+  width: 100%;
+  position: relative;
+}
+
+.navBar_imagen img {
+  height: 56px;
+  width: 200px;
+}
+
+.navBar_menu {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  height: 100%;
+}
+.navBar_menu ul {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5em;
+  height: 100%;
+  align-items: center;
+}
+.navBar_menu ul li {
+  list-style: none;
+  padding: 0.5em;
+  height: 30px;
+}
+.navBar_menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+.navBar_menu ul li:hover {
+  border-bottom: 2px solid #eee;
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.home__container {
+  padding: 1em;
+  width: 400px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  background-color: rgba(100, 2, 1, 0.5);
+}
+
+.home__imagen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 2s ease;
+}
+.home__imagen img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.pulsador {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 250px;
+  top: 350px;
+}
+
+.about {
+  height: 100vh;
+  width: 100%;
+}
+
+.portafolio {
+  height: 100vh;
+  width: 100%;
+}
+
+.contact {
+  height: 100vh;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.ocultar {
+  display: none;
+}
+
+.transition_house {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  z-index: 11;
+  opacity: 1;
+  bottom: 100px;
+  right: 300px;
+  border-radius: 100%;
+}
+
+@keyframes entrarcasa {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(30);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.aumentar {
+  animation: entrarcasa 4s forwards;
+}
+
+.container_house {
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

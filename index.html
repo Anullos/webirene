@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airin - Irene Martín Zambrana</title>
+    <!-- ====== CSS ====== -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+
+<body id="body">
+    <!-- ====== HEADER ====== -->
+    <header id="site-header">
+        <div class="navBar">
+            <div class="navBar_imagen">
+                <img src="https://hotbook.com.mx/wp-content/uploads/2019/04/hotbook-se-revela-la-primera-imagen-de-un-agujero-negro-portada.jpg"
+                    alt="Imagen navBar" />
+            </div>
+            <div class="navBar_menu">
+                <ul>
+                    <li><a href="#home" onclick="cambioPantalla('home')">Inicio</a></li>
+                    <li><a href="#about" onclick="cambioPantalla('about')">Sobre mi</a></li>
+                    <li><a href="#portafolio" onclick="cambioPantalla('portafolio')">Portafolio</a></li>
+                    <li><a href="#contact" onclick="cambioPantalla('contact')">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="transition_house" id="transition_house" onclick="aumentar()"></div>
+
+    <main role="main" class="main" id="main">
+        <!--===== INICIO =====-->
+        <section class="home" id="home">
+            <div class="home__imagen" id="home__imagen">
+                <img src="./assets/img/fondo_web.png" alt="" />
+
+            </div>
+            <div class="home__container">
+                <h1>Bienvenido a mi hogar</h1>
+                <h2>Interacciona con los elementos</h2>
+                <p>No sabes cuantas cosas puedes encontrar en la oscura casa del terror, asique ve con cuidado</p>
+            </div>
+
+
+            <div class="pulsador" id="pulsador"></div>
+        </section>
+        <div class="container_house ocultar" id="container_house">
+            <!--===== CONTACTO =====-->
+            <section class="contact panel" id="contact">
+                <div class="contact__container">
+                    <h1>Contacto</h1>
+                    <h2>Interacciona con los elementos</h2>
+                    <p>No sabes cuantas cosas puedes encontrar en la oscura casa del terror, asique ve con cuidado</p>
+                </div>
+            </section>
+            <!--===== PORTAFOLIO =====-->
+            <section class="portafolio panel" id="portafolio">
+                <div class="portafolio__container">
+                    <h1>Portafolio</h1>
+                    <h2>Interacciona con los elementos</h2>
+                    <p>No sabes cuantas cosas puedes encontrar en la oscura casa del terror, asique ve con cuidado
+                    </p>
+                </div>
+            </section>
+            <!--===== SOBRE MI =====-->
+            <section class="about panel" id="about">
+                <div class="about__container">
+                    <h1>Sobre mi</h1>
+                    <h2>Interacciona con los elementos</h2>
+                    <p>No sabes cuantas cosas puedes encontrar en la oscura casa del terror, asique ve con cuidado
+                    </p>
+                </div>
+            </section>
+            <span id="final"></span>
+        </div>
+    </main>
+
+
+
+    <!-- ====== MAIN JS ====== -->
+    <script src="./src/js/scroll_header.js"></script>
+    <script src="./src/js/principal.js"></script>
+</body>
+
+</html>

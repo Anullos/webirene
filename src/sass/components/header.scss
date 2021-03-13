@@ -1,0 +1,53 @@
+#site-header {
+  top: 0;
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  transition: all 0.3s ease;
+  z-index: 10;
+  background: rgba($color: #000000, $alpha: 0.5);
+}
+#site-header.hide {
+  top: -56px;
+}
+
+.navBar {
+    display: flex;
+  height: 56px;
+  width: 100%;
+  position: relative;
+}
+
+.navBar_imagen {
+  img {
+    height: 56px;
+    width: 200px;
+  }
+}
+
+.navBar_menu {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5em;
+    height: 100%;
+    align-items: center;
+    li {
+      list-style: none;
+      padding: 0.5em;
+      height: 30px;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      &:hover {
+        border-bottom: 2px solid #eee;
+      }
+    }
+  }
+}

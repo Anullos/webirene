@@ -1,0 +1,38 @@
+.home {
+  height: 100vh;
+  width: 100%;
+ // background-image: url(../../../assets/img/fondo_web.png);
+ // background-size: cover;
+  position: relative;
+}
+
+.home__container{
+    padding: 1em;
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    background-color: rgba(100,2,1,0.5);
+}
+
+.home__imagen{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 2s ease;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.pulsador{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 250px;
+    top: 350px;
+}
+
+
