@@ -4,6 +4,7 @@
   // background-image: url(../../../assets/img/fondo_web.png);
   // background-size: cover;
   position: relative;
+  z-index: 1;
 }
 
 .home__container {
@@ -63,7 +64,7 @@
   position: absolute;
   width: 150px;
   height: 100px;
-  z-index: 1;
+  z-index: 2;
   animation: flecha 2s infinite ease;
   text-align: center;
   img {
