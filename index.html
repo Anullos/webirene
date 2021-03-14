@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airin - Irene Martín Zambrana</title>
     <!-- ====== CSS ====== -->
+    <script src="https://kit.fontawesome.com/2c8cba498a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 
@@ -50,20 +51,59 @@
             <div class="personaje"></div>
             <!--===== CONTACTO =====-->
             <section class="contact panel" id="contact">
-                <div class="contact__container">
+                <div class="contact__head">
                     <h1>Contacto</h1>
-                    <h2>Interacciona con los elementos</h2>
-                    <p>No sabes cuantas cosas puedes encontrar en la oscura casa del terror, asique ve con cuidado</p>
+                </div>
+                <div class="contact__cuerpo">
+                    <div class="contact__titulo">
+                        <h2>¿Quieres algún dibujo?</h2>
+                        <p>Escríbeme y analizaré, de forma
+                            gratuita, todo lo que necesitarías para llevarlo a cabo, y me pondré en contacto
+                            contigo lo antes posible. </p>
+                    </div>
+                    <div class="contenedor-contacto">
+                        <form action="./src/php/send.php" method="POST" class="formulario" id="contactoemail">
+                            <div class="row">
+                                <div class="group-val">
+                                    <input placeholder="Nombre" class="contact__input" name="cf_name" size="40"
+                                        aria-required="true" aria-invalid="false">
+                                </div>
+                                <div class="group-val">
+                                    <input name="cf_email" placeholder="Email" class="contact__input"
+                                        onBlur="MM_validateForm('email','','NisEmail');return document.MM_returnValue"
+                                        size="25" maxlength="100" aria-required="true" aria-invalid="false">
+                                </div>
+
+                            </div>
+                            <div class="group-val2">
+                                <textarea name="cf_message" id="" cols="40" rows="4" class="contact__input"
+                                    placeholder="Mensaje" style="resize:none;" aria-required="true"
+                                    aria-invalid="false"></textarea>
+                            </div>
+                            <div class="contenedor-btn">
+                                <button type="submit" class="button-contacto">
+                                    <span class="texto">ENVIAR MENSAJE</span>
+                                    <i class="fas fa-chevron-right flecha"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
             <!--===== PORTAFOLIO =====-->
             <section class="portafolio panel" id="portafolio">
+                <h1>Portafolio</h1>
                 <div class="portafolio__container">
-                    <h1>Portafolio</h1>
-                    <h2>Interacciona con los elementos</h2>
-                    <p>No sabes cuantas cosas puedes encontrar en la oscura casa del terror, asique ve con cuidado
-                    </p>
+                    <div class="porta portafolio1" id="0"></div>
+                    <div class="porta portafolio2" id="1"></div>
+                    <div class="porta portafolio3" id="2"></div>
+                    <div class="porta portafolio4" id="3"></div>
                 </div>
+            </section>
+            <!--===== PORTAFOLIO MOSTRAR =====-->
+            <section class="imagen-light">
+                <img src="./assets/img/x.svg" alt="" class="close">
+                <img src="./assets/img/temporal/img1.jpg" alt="" class="agregar-imagen">
             </section>
             <!--===== SOBRE MI =====-->
             <section class="about panel" id="about">
@@ -83,6 +123,8 @@
     <!-- ====== MAIN JS ====== -->
     <script src="./src/js/scroll_header.js"></script>
     <script src="./src/js/principal.js"></script>
+    <script src="./src/js/lightbox.js"></script>
+    
 </body>
 
 </html>

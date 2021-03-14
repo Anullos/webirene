@@ -95,6 +95,77 @@
   background-position: bottom;
 }
 
+.portafolio__container {
+  position: relative;
+  height: 100%;
+}
+.portafolio__container .porta {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: grey;
+}
+.portafolio__container .portafolio1 {
+  top: 10%;
+  left: 30%;
+}
+.portafolio__container .portafolio2 {
+  top: 40%;
+  left: 15%;
+}
+.portafolio__container .portafolio3 {
+  top: 30%;
+  left: 70%;
+}
+.portafolio__container .portafolio4 {
+  top: 10%;
+  left: 90%;
+}
+
+.imagen-light {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* para centrar la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ponemos el translate para ocultar la imagen y luego mostrarlo en js */
+  transform: translate(100%);
+  transition: transform 0.2s ease-in-out;
+  z-index: 15;
+}
+
+/* lo llamamos en js */
+.show {
+  transform: translate(0);
+}
+
+.agregar-imagen {
+  object-fit: cover;
+  width: 60%;
+  border-radius: 10px;
+  /* animacion con dos segundos de retraso */
+  transform: scale(0);
+  transition: transform 0.3s 0.2s;
+}
+
+/* se crea una clase nueva para js */
+.showImage {
+  transform: scale(1);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  cursor: pointer;
+}
+
 .contact {
   height: 100vh;
   width: 100%;
@@ -102,6 +173,120 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  padding: 2rem;
+}
+
+.contact__head {
+  margin-top: 2rem;
+}
+
+.contact__cuerpo {
+  width: 70%;
+  margin: auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact__titulo p {
+  padding: 1em 0;
+}
+
+.contenedor-btn {
+  margin-top: 1.5em;
+}
+
+.button-contacto {
+  position: relative;
+  padding: 1.5em 2.5em;
+  display: flex;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-contacto .texto {
+  margin-right: 30px;
+  padding-top: 1px;
+}
+.button-contacto .flecha {
+  position: absolute;
+  top: 14px;
+  left: 160px;
+  font-size: 1.8em;
+}
+.button-contacto:hover .texto {
+  animation: opacityanim 0.5s ease-in-out forwards;
+  color: #012f6b;
+}
+.button-contacto:hover .flecha {
+  animation: moveflecha 0.2s ease-in-out forwards;
+  color: #012f6b;
+}
+
+@keyframes opacityanim {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes moveflecha {
+  from {
+    left: 160px;
+  }
+  to {
+    left: 170px;
+  }
+}
+.contenedor-contacto {
+  width: auto;
+  margin-top: 1em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-val {
+  width: 48%;
+  margin-top: 0;
+}
+.group-val input {
+  width: 100%;
+  padding: 1.1em 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+.group-val input:focus {
+  outline: none;
+  border: 2px solid #012f6b;
+  color: #012f6b;
+}
+.group-val input:focus::placeholder {
+  color: black;
+}
+
+.group-val2 {
+  width: 100%;
+  margin-top: 1.5em;
+}
+.group-val2 textarea {
+  width: 100%;
+  padding: 1.1em 1.2em;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.group-val2 textarea:focus {
+  outline: none;
+  border: 2px solid #012f6b;
+  color: #012f6b;
+}
+.group-val2 textarea:focus::placeholder {
+  color: black;
 }
 
 * {
@@ -159,7 +344,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 20;
 }
 
 /*# sourceMappingURL=styles.css.map */
