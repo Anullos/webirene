@@ -77,6 +77,65 @@
   object-fit: fill;
 }
 
+.transition_house {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  z-index: 11;
+  opacity: 1;
+  bottom: 100px;
+  right: 300px;
+  border-radius: 100%;
+}
+
+@keyframes entrarcasa {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(30);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.aumentar {
+  animation: entrarcasa 4s forwards;
+}
+
+.pulsaaqui {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  z-index: 1;
+  animation: flecha 2s infinite ease;
+  text-align: center;
+}
+.pulsaaqui img {
+  width: 60px;
+  height: 60px;
+  transform: rotate(45deg);
+  margin-left: 50px;
+}
+
+@keyframes flecha {
+  0% {
+    right: 350px;
+    bottom: 200px;
+  }
+  50% {
+    right: 370px;
+    bottom: 230px;
+  }
+  100% {
+    right: 350px;
+    bottom: 200px;
+  }
+}
 .about {
   height: 100vh;
   width: 100%;
@@ -298,36 +357,6 @@
 
 .ocultar {
   display: none;
-}
-
-.transition_house {
-  position: fixed;
-  height: 100px;
-  width: 100px;
-  background-color: black;
-  z-index: 11;
-  opacity: 1;
-  bottom: 100px;
-  right: 300px;
-  border-radius: 100%;
-}
-
-@keyframes entrarcasa {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  70% {
-    transform: translate(-50%, -50%) scale(30);
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.aumentar {
-  animation: entrarcasa 4s forwards;
 }
 
 .container_house {
