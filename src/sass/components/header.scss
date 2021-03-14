@@ -37,17 +37,38 @@
     height: 100%;
     align-items: center;
     li {
+      position: relative;
       list-style: none;
       padding: 0.5em;
       height: 30px;
-
       a {
         text-decoration: none;
         color: white;
       }
       &:hover {
         border-bottom: 2px solid #eee;
+        .submenu {
+          display: inline-flex;
+        }
       }
+    }
+  }
+}
+
+.submenu {
+  padding-top: 1em;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: grey;
+  a {
+    padding: 0.2em 0;
+    &:hover {
+      background-color: grey;
     }
   }
 }

@@ -23,7 +23,15 @@
                 <ul>
                     <li><a href="#home" onclick="cambioPantalla('home')">Inicio</a></li>
                     <li><a href="#about" onclick="cambioPantalla('about')">Sobre mi</a></li>
-                    <li><a href="#portafolio" onclick="cambioPantalla('portafolio')">Portafolio</a></li>
+                    <li><a href="#portafolio" onclick="cambioPantalla('portafolio')">Portafolio</a>
+                        <div class="submenu">
+                            <a href="#portafolio" onclick="aparecerImagen(0)">Ilustraciones</a>
+                            <a href="#portafolio" onclick="aparecerImagen(1)">Dibujos</a>
+                            <a href="#portafolio" onclick="aparecerImagen(2)">Logotipos</a>
+                            <a href="#portafolio" onclick="aparecerImagen(3)">Diseño</a>
+                        </div>
+                    </li>
+                    </li>
                     <li><a href="#contact" onclick="cambioPantalla('contact')">Contacto</a></li>
                 </ul>
             </div>
@@ -99,10 +107,18 @@
             <section class="portafolio panel" id="portafolio">
                 <h1>Portafolio</h1>
                 <div class="portafolio__container">
-                    <div class="porta portafolio1" id="0"></div>
-                    <div class="porta portafolio2" id="1"></div>
-                    <div class="porta portafolio3" id="2"></div>
-                    <div class="porta portafolio4" id="3"></div>
+                    <div class="porta portafolio1" id="0">
+                        <span class="portafolio_titulo">Logotipo de Anullos</span>
+                    </div>
+                    <div class="porta portafolio2" id="1">
+                        <span class="portafolio_titulo">Juego 1</span>
+                    </div>
+                    <div class="porta portafolio3" id="2">
+                        <span class="portafolio_titulo">Juego 1</span>
+                    </div>
+                    <div class="porta portafolio4" id="3">
+                        <span class="portafolio_titulo">Juego 1</span>
+                    </div>
                 </div>
             </section>
             <!--===== PORTAFOLIO MOSTRAR =====-->

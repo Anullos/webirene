@@ -12,7 +12,7 @@ const portafolioImg = [
 imagenes.forEach((imagen) => {
   imagen.addEventListener("click", () => {
     //  aparecerImagen(imagen.getAttribute('src'));
-    aparecerImagen(portafolioImg[imagen.id]);
+    aparecerImagen(imagen.id);
   });
 });
 
@@ -23,7 +23,8 @@ contenedorLight.addEventListener("click", (e) => {
   }
 });
 
-const aparecerImagen = (imagen) => {
+const aparecerImagen = (id) => {
+  const imagen = portafolioImg[id];
   imagenesLight.src = imagen;
   contenedorLight.classList.toggle("show");
   imagenesLight.classList.toggle("showImage");

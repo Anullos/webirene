@@ -38,6 +38,7 @@
   align-items: center;
 }
 .navBar_menu ul li {
+  position: relative;
   list-style: none;
   padding: 0.5em;
   height: 30px;
@@ -48,6 +49,27 @@
 }
 .navBar_menu ul li:hover {
   border-bottom: 2px solid #eee;
+}
+.navBar_menu ul li:hover .submenu {
+  display: inline-flex;
+}
+
+.submenu {
+  padding-top: 1em;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: grey;
+}
+.submenu a {
+  padding: 0.2em 0;
+}
+.submenu a:hover {
+  background-color: grey;
 }
 
 .home {
@@ -140,7 +162,7 @@
 .about {
   height: 100vh;
   width: 100%;
-  background-image: url("../../../assets/img/temporal/fondoabout.jpg");
+  background-image: url("../../assets/img/temporal/fondoabout.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -149,7 +171,7 @@
 .portafolio {
   height: 100vh;
   width: 100%;
-  background-image: url("../../../assets/img/temporal/fondoportafolio.jpg");
+  background-image: url("../../assets/img/temporal/fondoportafolio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -164,6 +186,21 @@
   width: 70px;
   height: 70px;
   background-color: grey;
+  justify-content: center;
+}
+.portafolio__container .porta .portafolio_titulo {
+  position: absolute;
+  white-space: nowrap;
+  background-color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+.portafolio__container .porta:hover .portafolio_titulo {
+  visibility: visible;
 }
 .portafolio__container .portafolio1 {
   top: 10%;
@@ -229,7 +266,7 @@
 .contact {
   height: 100vh;
   width: 100%;
-  background-image: url("../../../assets/img/temporal/fondocontact.jpg");
+  background-image: url("../../assets/img/temporal/fondocontact.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
