@@ -48,4 +48,17 @@
 
 .container_house {
   width: 100%;
+  .personaje{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-image: url('../../assets/img/temporal/alfilder.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 20;
+  }
 }

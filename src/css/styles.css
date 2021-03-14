@@ -74,30 +74,34 @@
 .home__imagen img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
-}
-
-.pulsador {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  right: 250px;
-  top: 350px;
+  object-fit: fill;
 }
 
 .about {
   height: 100vh;
   width: 100%;
+  background-image: url("../../../assets/img/temporal/fondoabout.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .portafolio {
   height: 100vh;
   width: 100%;
+  background-image: url("../../../assets/img/temporal/fondoportafolio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .contact {
   height: 100vh;
   width: 100%;
+  background-image: url("../../../assets/img/temporal/fondocontact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 * {
@@ -143,6 +147,19 @@
 
 .container_house {
   width: 100%;
+}
+.container_house .personaje {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../assets/img/temporal/alfilder.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 20;
 }
 
 /*# sourceMappingURL=styles.css.map */
